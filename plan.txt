@@ -1,0 +1,111 @@
+Améliorations : 
+- Voir si nécessaire de mettre une cause (facultatif) quand on refuse qq ou blc ?
+
+- Mettre une option "accepte tout le monde" qui demande pas d'accepter ou refuser qui accepte direct
+(compliqué, on va pas faire, par contre faire un salon pr dire qu'on fait des quotis)
+
+
+
+
+
+--------------------------------------
+A faire :
+- Ajouter la version espagnol du tutorial OK
+- Auto traducteur OK
+- Retirer role IC Asgo (useless de faire un salon en plus pour cette merde)
+
+
+---------------------------------------
+BETA TESTING :
+
+
+
+---------------------------------------
+
+
+
+-------------------------------------
+
+L'id du modal de register = id unique du raid
+
+
+------------------------------
+
+- Faire une commande /tutorial qui explique tout
+
+- /setup role :
+	- Créé les rôles suivants :
+        - Alzanor X
+        - Valehir X
+        - Paimon ressucité X
+        - Paimon X
+        - Bélial X
+        - Kirollas X
+        - Carno X
+        - Fernon X
+        - Zenas X
+        - Erenia X
+        - Grenigas
+        - Valakus X
+        - Kertos X
+        - Ibrahim X
+        - Glacerus/Draco X
+        - Laurena X
+        - Yertirand X
+        - Fafnir X
+        - Ping CI Asgobas X
+		- Leader
+
+
+
+- /setup reactionRole :
+	- Envoie un message Embed où l'on peut réagir aux différents rôles pour les avoir/enlever
+
+
+
+/raidcreate
+/raiddelete [args]
+/raidupdate (ouvre à nouveau le menu avec les trucs remplis par défaut puis update une fois validé ?)
+
+- Pouvoir créer un event avec une commande (permission rôle Leader) :
+	- Titre (nom du raid)
+	- Heure de départ
+	- Votre heure locale (Paris, Londre...) (good luck a moi-même demain pour gérer le timestamps poto)
+	- Canal (dr mafiou)
+	- Nombre de raid
+	- À fournir
+	- Niveau minimum pour ramener des mules (préciser gros dps uniquement)
+	- Nombre de places (voir si peut update ce message plus loin)
+	- SP recherchées (zerk, destroy) (voir commment faire ça propre)
+	- Autre informations (facultatif)
+		
+		(rappeler dans le message de poster stuff/SP dans salon stuff/SP)
+
+		-> Envoie message embed avec toutes les infos + bouton s'inscrire/se désinscrire
+		-> Créé un rôle avec ce format PSEUDOHOST_NOMRAID
+		-> Créé un salon avec ce format PSEUDOHOST_NOMRAID_TEAM
+
+
+- OUBLIE PAS DE CREER UNE TABLE PARTICIPANTS DONT L'ID PRIMARY KEY = IDLEADER DE LA TABLE RAIDS
+- Pouvoir annuler le raid avec une commande et envoyer un MP aux inscrits pour les prévenir
+
+- Pouvoir cliquer sur s'inscrire :
+	- Pseudo InGame
+	- Classe
+	- Niveau
+	- SP équipée pour le raid + SP disponible si besoin
+	- Nombre de mules souhaitées
+	- Autre information nécessaire
+
+		-> Envoie MP à l'user pour dire que sa demande a bien été prise en compte
+		-> Envoie message staff avec les infos + bouton accepter/refuser
+	
+
+- Pouvoir gérer une inscription :
+	- Message embed avec toutes les infos de l'inscription
+	- Bouton accepter
+		-> Si accepté, envoyer un message dans un salon PSEUDOHOST_NOMRAID_TEAM (@Goats + SP souhaitée est inscrit pour le raid)
+		-> Donner rôle nécessaire poru avoir accès au salon de la team
+		-> Mettre à jour l'embed d'inscription avec le nombre de places restantes
+	- Bouton refuser
+		-> Envoie un MP au joueur concerné lui indiquant qu'il a été refusé (avec la cause)
